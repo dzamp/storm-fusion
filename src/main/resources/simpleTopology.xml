@@ -1,0 +1,26 @@
+<topology>
+    <bolts>
+        <bolt>
+            <id>bolt-1</id>
+            <className>algorithms.DefaultBolt</className>
+            <parallelism>2</parallelism>
+        </bolt>
+    </bolts>
+
+    <spouts>
+        <spout>
+            <id>spout-1</id>
+            <className>algorithms.DefaultSpout</className>
+            <parallelism>2</parallelism>
+        </spout>
+    </spouts>
+
+    <streams>
+        <stream>
+        <type>ALL</type>
+            <from>spout-1</from>
+            <to>bolt-1</to>
+        </stream>
+    </streams>
+
+</topology>
